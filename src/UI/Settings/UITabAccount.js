@@ -30,16 +30,6 @@ export default {
     html: () => {
         let h = `<h1>${i18n('account')}</h1>`;
 
-        // change password button
-        if(!user.is_temp){
-            h += `<div class="settings-card">`;
-                h += `<strong>${i18n('password')}</strong>`;
-                h += `<div style="flex-grow:1;">`;
-                    h += `<button class="button change-password" style="float:right;">${i18n('change_password')}</button>`;
-                h += `</div>`;
-            h += `</div>`;
-        }
-
         // change username button
         h += `<div class="settings-card">`;
             h += `<div>`;
@@ -63,14 +53,6 @@ export default {
                 h += `</div>`;
             h += `</div>`;
         }
-
-        // session manager
-        h += `<div class="settings-card">`;
-            h += `<strong>${i18n('sessions')}</strong>`;
-            h += `<div style="flex-grow:1;">`;
-                h += `<button class="button manage-sessions" style="float:right;">${i18n('manage_sessions')}</button>`;
-            h += `</div>`;
-        h += `</div>`;
 
         // 'Delete Account' button
         h += `<div class="settings-card settings-card-danger">`;
